@@ -1,0 +1,43 @@
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  box-shadow: 0 2px 5px #c0bebe;
+  position: fixed;
+  background-color: #0dcaf0;
+  color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+h2 {
+  margin-bottom: 0;
+  font-style: italic;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+.nav-list > li {
+  list-style-type: none;
+  margin-right: 20px;
+}
+.nav-list > li:last-child {
+  margin-right: 0;
+}
+.nav-list > li > a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color .25s ease-in-out
+}
+.nav-list > li > a:hover,
+.nav-list > li > a:active,
+.nav-list > li > a:focus {
+  color: #777777;
+  transition: color .25s ease-in-out
+}
