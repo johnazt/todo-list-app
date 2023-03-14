@@ -1,27 +1,78 @@
-# TodolistApp
+# TodolistApp con Angular y Socket.io
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+Esta es una aplicación sencilla de Todo List desarrollada con Angular y Socket.io. La aplicación te permite agregar, editar, eliminar y marcar tareas como completadas en tiempo real utilizando Socket.io.
 
-## Development server
+## 🚨Prerrequisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de comenzar, asegúrese de tener instalado lo siguiente en su computadora:
 
-## Code scaffolding
+- Node.js (versión 12 o posterior): https://nodejs.org
+- Angular CLI: 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash 
+npm install -g @angular/cli
+ ```
+ Si no tiene Node.js o Angular CLI instalados, siga las instrucciones de instalación en los enlaces proporcionados
 
-## Build
+## Comenzando
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para empezar con la aplicación, sigue estos pasos:
 
-## Running unit tests
+1. Clona el repositorio en tu máquina local utilizando el siguiente comando:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
 
-## Running end-to-end tests
+git clone git@github.com:johnazt/todo-list-app.git
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Navega al directorio del proyecto utilizando el siguiente comando:
+```bash
+cd todo-list-app
+```
 
-## Further help
+3. Instala las dependencias utilizando el siguiente comando:
+```bash
+npm install 
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. Inicia el servidor navegando al directorio `src/server` y ejecutando el siguiente comando:
+```bash
+node index.js  
+```
+o 
+```bash
+npm start 
+```
+
+5. Inicia la aplicación de Angular en otra ventana de terminal ejecutando el siguiente comando:
+
+```bash
+ng serve -o
+```
+
+6. Abre tu navegador web y navega a `http://localhost:4200` para utilizar la aplicación Todo List.
+
+## Funcionalidades
+
+- Agregar tareas a la lista
+- Editar tareas en la lista
+- Eliminar tareas de la lista
+- Marcar tareas como completadas
+- Actualizaciones en tiempo real utilizando Socket.io
+
+## Tecnologías Utilizadas
+
+- Angular
+- Socket.io
+- Node.js
+
+## Créditos
+
+Esta aplicación Todo List fue desarrollada por [John Asto](https://github.com/johnazt).
+
+
+## Contacto
+
+Si tienes alguna pregunta o comentario, no dudes en ponerte en contacto conmigo en [john.azt.dev@gmail.com](mailto:tu-correo@ejemplo.com).
+
+---
