@@ -14,14 +14,13 @@ npm install -g @angular/cli
  ```
  Si no tiene Node.js o Angular CLI instalados, siga las instrucciones de instalación en los enlaces proporcionados
 
-## Comenzando
+## ✅Comenzando
 
 Para empezar con la aplicación, sigue estos pasos:
 
 1. Clona el repositorio en tu máquina local utilizando el siguiente comando:
 
 ```bash
-
 git clone git@github.com:johnazt/todo-list-app.git
 ```
 
@@ -52,7 +51,7 @@ ng serve -o
 
 6. Abre tu navegador web y navega a `http://localhost:4200` para utilizar la aplicación Todo List.
 
-## Funcionalidades
+## 📌Funcionalidades
 
 - Agregar tareas a la lista
 - Editar tareas en la lista
@@ -60,7 +59,7 @@ ng serve -o
 - Marcar tareas como completadas
 - Actualizaciones en tiempo real utilizando Socket.io
 
-## Tecnologías Utilizadas
+## ⭐️Tecnologías Utilizadas
 
 - Angular
 - Socket.io
