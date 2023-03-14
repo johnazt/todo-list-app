@@ -41,7 +41,7 @@ export class SocketService {
   public completeTask(id: string): void {
     this.socket.emit('completeTask', { id });
   }
-  public updateTask(id:string, newName:string): void {
+  public updateTask(id: string, newName: string): void {
     this.socket.emit('updateTask', id, newName);
   }
 

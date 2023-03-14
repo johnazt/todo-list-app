@@ -27,7 +27,6 @@ export class TodolistComponent implements OnInit {
   public getTasks(): void {
     this.socketService.getTasks().subscribe((data: any) => {
       this.tasks.push(data);
-      console.log(this.tasks);
     });
   }
   public createTask(): void {
@@ -39,7 +38,6 @@ export class TodolistComponent implements OnInit {
   }
   public completeTask(id: string): void {
     this.socketService.completeTask(id)
-    console.log(this.tasks)
   }
   public call(task: Task) {
    this.editTaskValue = task.name
@@ -47,7 +45,6 @@ export class TodolistComponent implements OnInit {
   public updateTask(id: string, newName: string) {
     this.editTaskValue = newName
     this.socketService.updateTask(id, newName)
-    console.log(this.editTaskValue)
   }
 
 }
