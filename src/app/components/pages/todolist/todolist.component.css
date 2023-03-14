@@ -1,8 +1,9 @@
 .tasks {
   max-width: 750px;
-  margin-top: 3em;
-  margin: 7em auto 3em;
+  min-width: 350px;
+  margin: 5em auto 1em;
   padding: 1em;
+  position: relative;
 }
 form {
   display: flex;
@@ -23,17 +24,20 @@ form {
   align-items: center;
   margin-bottom: 1em;
   background-color: #0dcaf0;
-  padding: 1em;
+  padding: 1em 2em;
   border-radius: 7px;
   box-shadow: 2px 6px 7px #d8d8d8;
 }
 .task__title {
   max-width: 75%;
-  font-size: 22px;
+  font-size: 18px;
   color: #fff;
 }
 .task span {
   margin: 10px 0;
+}
+.newTask {
+  padding: 0.5em 1em;
 }
 .container-status {
   display: flex;
@@ -49,12 +53,11 @@ form {
 }
 .completed {
   cursor: pointer;
-  font-size: 22px;
   font-weight: 600;
 }
 .status-task {
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 }
 .btn-task {
@@ -76,4 +79,22 @@ form {
 }
 .btn-task:active {
   transform: scale(0.95);
+}
+@media screen and (min-width: 750px) {
+  .tasks {
+    max-width: 1024px;
+    margin-top: 7em;
+  }
+  .task__title {
+    max-width: 75%;
+    font-size: 22px;
+  }
+  .status-task {
+    font-size: 18px;
+  }
+  .container-tasks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1em;
+  }
 }

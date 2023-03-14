@@ -29,7 +29,7 @@ export class SocketService {
 
   public listen() {
     this.socket.on('connect', () => {
-      console.log('Me ejecute');
+      console.log('server listening...');
     });
   }
   public createTask(name: string): void {

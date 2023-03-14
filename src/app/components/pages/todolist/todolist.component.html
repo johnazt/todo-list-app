@@ -3,41 +3,40 @@
     <input class="newTask" type="text" required formControlName="name">
     <button type="submit" class="btn-task"><i class="ph ph-plus"></i></button>
   </form>
-  <div class="task" *ngFor="let task of tasks">
-    <span [style.text-decoration]="task ? 'line-through strikethrough' : ''" [class]="task.completed ? 'completed task__title':'completed
-      strikethrough task__title'" (click)="completeTask(task.id)"><b>{{task.name}}</b></span>
-    <div class="container-status">
-      <span class="status-task">
-        {{task.completed ? 'pending': 'completed'}}
-      </span>
-      <div class="btns-container">
-        <button (click)="call(task)" [attr.data-bs-target]="'#staticBackdrop-'+task.id" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-          type="button" class="btn-task btn-update"><i class="ph
-            ph-pencil-simple-line"></i></button>
-        <button (click)="deleteTask(task.id)" class="btn-task btn-delete"><i class="ph ph-trash"></i></button>
+  <div class="container-tasks">
+
+    <div class="task" *ngFor="let task of tasks">
+      <span [style.text-decoration]="task ? 'line-through strikethrough' : ''" [class]="task.completed ? 'completed task__title':'completed
+        strikethrough task__title'" (click)="completeTask(task.id)"><b>{{task.name}}</b></span>
+      <div class="container-status">
+        <span class="status-task">
+          {{task.completed ? 'pending': 'completed'}}
+        </span>
+        <div class="btns-container">
+          <button (click)="call(task)" [attr.data-bs-target]="'#staticBackdrop-'+task.id" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+            type="button" class="btn-task btn-update"><i class="ph
+              ph-pencil-simple-line"></i></button>
+          <button (click)="deleteTask(task.id)" class="btn-task btn-delete"><i class="ph ph-trash"></i></button>
+        </div>
       </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop-{{task.id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      [attr.aria-labelledby]="'staticBackdropLabel-'+task.id" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" [id]="'staticBackdropLabel-'+task.id">Edit Task</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="input-group p-4">
-              <input type="text" class="form-control" placeholder="Edit Task Description" [(ngModel)]="editTaskValue">
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="updateTask(task.id, editTaskValue)">Update</button>
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop-{{task.id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        [attr.aria-labelledby]="'staticBackdropLabel-'+task.id" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" [id]="'staticBackdropLabel-'+task.id">Edit Task</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group p-4">
+                <input type="text" class="form-control" placeholder="Edit Task Description" [(ngModel)]="editTaskValue">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="updateTask(task.id, editTaskValue)">Update</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
-
-
-
 </div>
