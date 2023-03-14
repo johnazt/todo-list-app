@@ -28,10 +28,11 @@ export class SocketService {
   }
 
   public listen() {
-    this.socket.on('connect', () => {
+    this.socket.on('connection', () => {
       console.log('server listening...');
     });
   }
+
   public createTask(name: string): void {
     this.socket.emit('createTask', { name });
   }

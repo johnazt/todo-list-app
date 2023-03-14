@@ -19,7 +19,7 @@
           <button (click)="deleteTask(task.id)" class="btn-task btn-delete"><i class="ph ph-trash"></i></button>
         </div>
       </div>
-      <!-- Modal -->
+
       <div class="modal fade" id="staticBackdrop-{{task.id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         [attr.aria-labelledby]="'staticBackdropLabel-'+task.id" aria-hidden="true">
         <div class="modal-dialog">

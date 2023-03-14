@@ -18,8 +18,8 @@ export class TodolistComponent implements OnInit {
   constructor(private socketService: SocketService, private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    this.socketService.getTasks().subscribe((data) => {
-      this.tasks = data;
+    this.socketService.getTasks().subscribe((tasks: Task[]) => {
+      this.tasks = tasks;
     });
     this.socketService.listen();
   }
